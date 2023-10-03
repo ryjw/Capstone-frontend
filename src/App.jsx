@@ -1,35 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState, useEffect } from "react";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // state for ordering
+  const [items, setItems] = useState([]);
+  const [user, setUser] = useState({});
+  // const [promotions, setPromotions] = useState([]);
+  const [orderItems, setOrderItems] = useState([]);
+  const [order, setOrder] = useState({});
+
+  // const [transaction, setTransaction] = useState({});
+  // const [customer, setCustomer] = useState({});
+
+  const [token, setToken] = useState("");
+
+  // async function fetchUser() {
+  //   const localToken = localStorage.getItem("token");
+  //   if (localToken) {
+  //     setToken(localToken);
+  //   }
+  //   if (!token) {
+  //     return;
+  //   }
+  //   const res = await fetch(`${API}/users/token`, {
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
+  //     },
+  //   });
+  //   const info = await res.json();
+  //   if (info.success) {
+  //     setUser(info.user);
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   fetchItems();
+  //   fetchPromotions();
+  //   fetchUser();
+  // }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar token={token} user={user} setUser={setUser} setToken={setToken} />
+      <Outlet context={{ setToken }} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
