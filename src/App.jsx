@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Navbar token={token} user={user} setUser={setUser} setToken={setToken} />
-      <Outlet context={{ setToken }} />
+      <Outlet context={{ setToken, items }} />
     </>
   );
 }

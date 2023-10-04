@@ -9,9 +9,8 @@ export default function Navbar({ token, user, setUser, setToken }) {
 
   return (
     <div id="navbar">
-      <Link to={"/"}>Homepage</Link>
-      <Link to={"/menu"}>Menu</Link>
-      <Link to={"/basket"}>Basket</Link>
+      <div>Logo</div>
+      <Link to={"/"}>Menu</Link>
       {token ? (
         <>
           <div>Hello username</div>
@@ -25,6 +24,7 @@ export default function Navbar({ token, user, setUser, setToken }) {
           <Link to={"/register"}>Register</Link>
         </>
       )}
+      <Link to={"/basket"}>Basket</Link>
     </div>
   );
 }
