@@ -6,12 +6,7 @@ function App() {
   // state for ordering
   const [items, setItems] = useState([]);
   const [user, setUser] = useState({});
-  // const [promotions, setPromotions] = useState([]);
-  const [orderItems, setOrderItems] = useState([]);
   const [order, setOrder] = useState({});
-
-  // const [transaction, setTransaction] = useState({});
-  // const [customer, setCustomer] = useState({});
 
   const [token, setToken] = useState("");
 
