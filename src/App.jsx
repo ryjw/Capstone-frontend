@@ -4,7 +4,18 @@ import Navbar from "./components/Navbar";
 
 function App() {
   // state for ordering
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([
+    {
+      id: "0a817d6e-be92-430e-a6f4-719801738c64",
+      name: "Krabby Patty",
+      category: "Burgers",
+    },
+    {
+      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
+      name: "Kelp Shake",
+      category: "Drinks",
+    },
+  ]);
   const [user, setUser] = useState({});
   const [order, setOrder] = useState({});
 

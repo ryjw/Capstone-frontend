@@ -6,11 +6,9 @@ export default function Menu() {
   return (
     <>
       <div className="menu-flex">
-        <Item />
-        <Item />
-        <Item />
-        <Item />
-        <Item />
+        {items.map((item) => {
+          return <Item item={item} />;
+        })}
       </div>
     </>
   );
