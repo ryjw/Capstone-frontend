@@ -17,7 +17,28 @@ function App() {
     },
   ]);
   const [user, setUser] = useState({});
-  const [order, setOrder] = useState({});
+  const [order, setOrder] = useState([
+    {
+      id: "0a817d6e-be92-430e-a6f4-719801738c64",
+      name: "Krabby Patty",
+      category: "Burgers",
+    },
+    {
+      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
+      name: "Kelp Shake",
+      category: "Drinks",
+    },
+    {
+      id: "0a817d6e-be92-430e-a6f4-719801738c64",
+      name: "Krabby Patty",
+      category: "Burgers",
+    },
+    {
+      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
+      name: "Kelp Shake",
+      category: "Drinks",
+    },
+  ]);
 
   const [token, setToken] = useState("");
 
@@ -40,16 +61,16 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    fetchItems();
-    fetchPromotions();
-    fetchUser();
-  }, []);
+  // useEffect(() => {
+  //   fetchItems();
+  //   fetchPromotions();
+  //   fetchUser();
+  // }, []);
 
   return (
     <>
       <Navbar token={token} user={user} setUser={setUser} setToken={setToken} />
-      <Outlet context={{ setToken, items }} />
+      <Outlet context={{ setToken, items, order }} />
     </>
   );
 }
