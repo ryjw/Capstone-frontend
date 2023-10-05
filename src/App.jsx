@@ -21,30 +21,30 @@ function App() {
 
   const [token, setToken] = useState("");
 
-  // async function fetchUser() {
-  //   const localToken = localStorage.getItem("token");
-  //   if (localToken) {
-  //     setToken(localToken);
-  //   }
-  //   if (!token) {
-  //     return;
-  //   }
-  //   const res = await fetch(`${API}/users/token`, {
-  //     headers: {
-  //       Authorization: `Bearer ${token}`,
-  //     },
-  //   });
-  //   const info = await res.json();
-  //   if (info.success) {
-  //     setUser(info.user);
-  //   }
-  // }
+  async function fetchUser() {
+    const localToken = localStorage.getItem("token");
+    if (localToken) {
+      setToken(localToken);
+    }
+    if (!token) {
+      return;
+    }
+    const res = await fetch(`${API}/users/token`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const info = await res.json();
+    if (info.success) {
+      setUser(info.user);
+    }
+  }
 
-  // useEffect(() => {
-  //   fetchItems();
-  //   fetchPromotions();
-  //   fetchUser();
-  // }, []);
+  useEffect(() => {
+    fetchItems();
+    fetchPromotions();
+    fetchUser();
+  }, []);
 
   return (
     <>
