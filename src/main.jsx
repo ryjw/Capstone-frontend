@@ -8,6 +8,8 @@ import Menu from "./components/Menu.jsx";
 import Basket from "./components/Basket.jsx";
 import NotFound from "./components/NotFound.jsx";
 import Register from "./components/Register.jsx";
+import Checkout from "./components/Checkout.jsx";
+import CompletedOrders from "./components/CompletedOrders.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,8 @@ const router = createBrowserRouter([
       { path: "basket", element: <Basket /> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
+      { path: "checkout", element: <Checkout /> },
+      { path: "orders", element: <CompletedOrders /> },
       { path: "*", element: <NotFound /> },
     ],
   },
