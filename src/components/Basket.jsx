@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router-dom";
+import { NavLink, useOutletContext } from "react-router-dom";
 
 export default function Basket() {
   const { order } = useOutletContext();
@@ -19,9 +19,19 @@ export default function Basket() {
           <div>
             item: {item.name} quantity:
             {order.filter((x) => x.id === item.id).length}
+            Price:
+            {order
+              .filter((x) => x.id === item.id)
+              .map((y) => y.price)
+              .reduce((previous, current) => {
+                return previous + current;
+              })}
           </div>
         );
       })}
+      <div>
+        <NavLink to={"checkout"}>Check out</NavLink>
+      </div>
     </div>
   );
 }

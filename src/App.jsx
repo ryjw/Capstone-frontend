@@ -9,11 +9,13 @@ function App() {
       id: "0a817d6e-be92-430e-a6f4-719801738c64",
       name: "Krabby Patty",
       category: "Burgers",
+      price: 10,
     },
     {
       id: "df7595d1-bacf-4656-81b7-d989beff0d86",
       name: "Kelp Shake",
       category: "Drinks",
+      price: 7,
     },
   ]);
   const [user, setUser] = useState({});
@@ -22,21 +24,25 @@ function App() {
       id: "0a817d6e-be92-430e-a6f4-719801738c64",
       name: "Krabby Patty",
       category: "Burgers",
+      price: 10,
     },
     {
       id: "df7595d1-bacf-4656-81b7-d989beff0d86",
       name: "Kelp Shake",
       category: "Drinks",
+      price: 7,
     },
     {
       id: "0a817d6e-be92-430e-a6f4-719801738c64",
       name: "Krabby Patty",
       category: "Burgers",
+      price: 10,
     },
     {
       id: "df7595d1-bacf-4656-81b7-d989beff0d86",
       name: "Kelp Shake",
       category: "Drinks",
+      price: 7,
     },
   ]);
 
