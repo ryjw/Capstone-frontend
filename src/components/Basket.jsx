@@ -30,6 +30,14 @@ export default function Basket() {
         );
       })}
       <div>
+        Total price:{" "}
+        {order
+          .map((item) => item.price)
+          .reduce((previous, current) => {
+            return previous + current;
+          })}
+      </div>
+      <div>
         <NavLink to={"checkout"}>Check out</NavLink>
       </div>
     </div>
