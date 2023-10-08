@@ -2,6 +2,54 @@ import { NavLink, useOutletContext } from "react-router-dom";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
 export default function Basket() {
+  const { orderItems, items, order } = useOutletContext();
+
+  return orderItems.length > 0 ? (
+    <div></div>
+  ) : (
+    <div>
+      <h1>Basket empty</h1>
+    </div>
+  );
+
+  // fetch orderitems
+  // take orderItems and display the names in a list by filtering through items to match with the orderItemID//
+  // return (
+  //   <div>
+  //     <h1>Order</h1>
+  //     <ul>
+  //       {orderItems.map((orderItem) => {
+  //         return (
+  //           <li key={orderItem.id}>
+  //             {items
+  //               .filter((item) => item.id === orderItem.id)
+  //               .map((item) => {
+  //                 return (
+  //                   <div key={item.id}>
+  //                     {item.name} {item.price}
+  //                   </div>
+  //                 );
+  //               })}
+  //           </li>
+  //         );
+  //       })}
+  //     </ul>
+  //     <div>
+  //       Total price:{" "}
+  //       {orderItems
+  //         .map((item) => item.price)
+  //         .reduce((previous, current) => {
+  //           return previous + current;
+  //         })}
+  //     </div>
+  //     <div>
+  //       <NavLink to={"checkout"}>Check out</NavLink>
+  //     </div>
+  //   </div>
+  // );
+}
+
+/* export default function Basket() {
   const { order, setOrder } = useOutletContext();
   let uniqueItems = [];
   for (let i = 0; i < order.length; i++) {
@@ -59,4 +107,4 @@ export default function Basket() {
       </div>
     )
   );
-}
+} */
