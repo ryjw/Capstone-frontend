@@ -32,21 +32,20 @@ export default function Menu() {
             </ul>
           </div>
         </div>
-        <div className="title"> Company Menu</div>
-      </div>
-      <div className="menu-flex">
-        {items.map((item) => {
-          return (
-            <Item
-              item={item}
-              token={token}
-              addToBasket={addToBasket}
-              key={item.id}
-            />
-          );
-        })}
+        <div className="title"> Company Menu</div>{" "}
+        <div className="grid-container">
+          {items.map((item) => {
+            return (
+              <Item
+                item={item}
+                token={token}
+                addToBasket={addToBasket}
+                key={item.id}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );
 }
-
