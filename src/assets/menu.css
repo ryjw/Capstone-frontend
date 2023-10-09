@@ -1,0 +1,34 @@
+.side-bar-container {
+    max-width: 30%;
+    margin: 20px 0px 20px 20px;
+  }
+  
+  .side-bar-links li {
+    list-style-type: none;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 5px 0px 5px 0px;
+  }
+  
+  .favorites {
+    max-width: 30%;
+    margin: 20px 0px 20px 20px;
+  }
+  
+  .favorites h1 {
+    margin-left: 160px;
+  }
+  
+  .menu-flex {
+    max-width: 40%;
+    margin: 10px 20px 20px auto; /* Adjust the margin to move it to the right */
+  }
+  
+  .grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px; /* Adjust the font size */
+  }
+  
