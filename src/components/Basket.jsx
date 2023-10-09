@@ -1,5 +1,5 @@
 import { NavLink, useOutletContext } from "react-router-dom";
-import { FiPlus, FiMinus } from "react-icons/fi";
+import { FiPlus, FiMinus, FiTrash, FiTrash2 } from "react-icons/fi";
 import { API } from "../API/api.js";
 
 export default function Basket() {
@@ -58,6 +58,20 @@ export default function Basket() {
     }
   }
 
+  async function handleRemove(orderItem) {
+    const res = await fetch(`${API}/orders/items/${orderItem.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const info = await res.json();
+    if (info.success) {
+      fetchOpenOrder();
+    }
+  }
+
   return orderItems.length > 0 ? (
     <div>
       <h1>Basket</h1>
@@ -77,6 +91,7 @@ export default function Basket() {
                   onClick={() => handleAdd(orderItem)}
                   className="plusminus"
                 />
+                <FiTrash2 onClick={() => handleRemove(orderItem)} />
               </p>
               <p>
                 X {orderItem.quantity} = $
