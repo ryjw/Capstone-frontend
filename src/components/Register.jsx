@@ -48,7 +48,7 @@ export default function Register() {
   async function createBasket() {}
 
   return (
-    <div className="flex center">
+    <div className="flex-center">
       <div>
         <form
           className="form"
@@ -59,14 +59,14 @@ export default function Register() {
           <div className="input-container">
             <input
               onChange={(e) => setUsername(e.target.value)}
-              placeholder="username"
+              placeholder="Choose your username"
               value={username}
             />
           </div>
           <div className="input-container">
             <input
               onChange={(e) => setPassword(e.target.value)}
-              placeholder="password"
+              placeholder="Choose your password"
               value={password}
             />
           </div>
