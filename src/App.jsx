@@ -1,51 +1,14 @@
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { API } from "./API/api.js";
 
 function App() {
   // state for ordering
-  const [items, setItems] = useState([
-    {
-      id: "0a817d6e-be92-430e-a6f4-719801738c64",
-      name: "Krabby Patty",
-      category: "Burgers",
-      price: 10,
-    },
-    {
-      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
-      name: "Kelp Shake",
-      category: "Drinks",
-      price: 7,
-    },
-  ]);
+  const [items, setItems] = useState([]);
   const [user, setUser] = useState({});
-  const [order, setOrder] = useState([
-    {
-      id: "0a817d6e-be92-430e-a6f4-719801738c64",
-      name: "Krabby Patty",
-      category: "Burgers",
-      price: 10,
-    },
-    {
-      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
-      name: "Kelp Shake",
-      category: "Drinks",
-      price: 7,
-    },
-    {
-      id: "0a817d6e-be92-430e-a6f4-719801738c64",
-      name: "Krabby Patty",
-      category: "Burgers",
-      price: 10,
-    },
-    {
-      id: "df7595d1-bacf-4656-81b7-d989beff0d86",
-      name: "Kelp Shake",
-      category: "Drinks",
-      price: 7,
-    },
-  ]);
-
+  const [order, setOrder] = useState({});
+  const [orderItems, setOrderItems] = useState([]);
   const [token, setToken] = useState("");
 
   async function fetchUser() {
@@ -67,16 +30,68 @@ function App() {
     }
   }
 
-  // useEffect(() => {
-  //   fetchItems();
-  //   fetchPromotions();
-  //   fetchUser();
-  // }, []);
+  async function fetchItems() {
+    const res = await fetch(`${API}/menu`);
+    const info = await res.json();
+    setItems(info.menuItems);
+  }
+
+  async function fetchOpenOrder() {
+    const res = await fetch(`${API}/orders/${user.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const info = await res.json();
+    if (info.success) {
+      const currentOrder = await info.orders.find((order) => {
+        return order.status === "CART";
+      });
+      await setOrder(currentOrder);
+    }
+  }
+
+  function extractOrderItems() {
+    if (order && order.orderItems && order.orderItems.length > 0) {
+      setOrderItems(order.orderItems);
+    }
+  }
+
+  async function addToBasket() {}
+
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  useEffect(() => {
+    fetchUser();
+  }, [token]);
+
+  useEffect(() => {
+    fetchOpenOrder();
+  }, [user]);
+
+  useEffect(() => {
+    extractOrderItems();
+  }, [order]);
 
   return (
     <>
       <Navbar token={token} user={user} setUser={setUser} setToken={setToken} />
-      <Outlet context={{ setToken, items, order, setOrder }} />
+      <Outlet
+        context={{
+          setToken,
+          items,
+          order,
+          setOrder,
+          orderItems,
+          addToBasket,
+          fetchOpenOrder,
+          token,
+        }}
+      />
     </>
   );
 }

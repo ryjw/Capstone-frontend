@@ -3,7 +3,7 @@ import Item from "./Item.jsx";
 import "../assets/menu.css";
 
 export default function Menu() {
-  const { items } = useOutletContext();
+  const { items, token, addToBasket } = useOutletContext();
   return (
     <>
       <div className="main-container">
@@ -36,7 +36,14 @@ export default function Menu() {
       </div>
       <div className="menu-flex">
         {items.map((item) => {
-          return <Item item={item} />;
+          return (
+            <Item
+              item={item}
+              token={token}
+              addToBasket={addToBasket}
+              key={item.id}
+            />
+          );
         })}
       </div>
     </>

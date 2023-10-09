@@ -1,1 +1,1 @@
-export const API = null;
+export const API = "https://capstone-backend-peqs.onrender.com";
