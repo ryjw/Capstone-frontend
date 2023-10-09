@@ -4,16 +4,15 @@
   box-sizing: border-box;
   font-family: Speedee, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica Neue, Arial, Noto Sans, sans-serif;
-    font-size: 14px;
-    letter-spacing: -.15;
-    line-height: 24px;
+  font-size: 14px;
+  letter-spacing: -0.15;
+  line-height: 24px;
 }
 
 /* to see layout */
 div {
   border: 1px solid grey;
 }
-
 
 a {
   color: inherit;
@@ -24,3 +23,6 @@ a {
   width: 200px;
 }
 
+.plusminus {
+  font-size: 20px;
+}
