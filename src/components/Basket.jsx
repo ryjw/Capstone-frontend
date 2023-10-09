@@ -12,7 +12,6 @@ export default function Basket() {
   }
 
   async function handleSubtract(orderItem) {
-    // e.preventDefault();
     if (orderItem.quantity > 1) {
       const res = await fetch(`${API}/orders/items/${orderItem.id}`, {
         method: "PUT",
@@ -43,7 +42,6 @@ export default function Basket() {
     }
   }
   async function handleAdd(orderItem) {
-    // e.preventDefault();
     const res = await fetch(`${API}/orders/items/${orderItem.id}`, {
       method: "PUT",
       headers: {
@@ -58,7 +56,6 @@ export default function Basket() {
     if (info.success) {
       fetchOpenOrder();
     }
-    fetchOpenOrder();
   }
 
   return orderItems.length > 0 ? (

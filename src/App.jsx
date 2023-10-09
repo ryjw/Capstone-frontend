@@ -59,8 +59,6 @@ function App() {
     }
   }
 
-  async function addToBasket() {}
-
   useEffect(() => {
     fetchItems();
   }, []);
@@ -87,7 +85,6 @@ function App() {
           order,
           setOrder,
           orderItems,
-          addToBasket,
           fetchOpenOrder,
           token,
         }}

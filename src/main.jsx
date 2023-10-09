@@ -10,6 +10,7 @@ import NotFound from "./components/NotFound.jsx";
 import Register from "./components/Register.jsx";
 import Checkout from "./components/Checkout.jsx";
 import CompletedOrders from "./components/CompletedOrders.jsx";
+import ItemDetail from "./components/ItemDetail.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "register", element: <Register /> },
       { path: "checkout", element: <Checkout /> },
       { path: "orders", element: <CompletedOrders /> },
+      { path: "item/:itemId", element: <ItemDetail /> },
       { path: "*", element: <NotFound /> },
     ],
   },
