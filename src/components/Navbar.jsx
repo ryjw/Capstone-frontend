@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import NavItems from "./NavItems";
+import "../assets/navbar.css";
 
 export default function Navbar({ token, user, setUser, setToken }) {
   function handleLogout() {
@@ -8,23 +10,8 @@ export default function Navbar({ token, user, setUser, setToken }) {
   }
 
   return (
-    <div id="navbar">
-      <div>Logo</div>
-      <Link to={"/"}>Menu</Link>
-      {token ? (
-        <>
-          <div>Hello username</div>
-          <Link onClick={handleLogout} to={"/"}>
-            Logout
-          </Link>
-        </>
-      ) : (
-        <>
-          <Link to={"/login"}>Login</Link>
-          <Link to={"/register"}>Register</Link>
-        </>
-      )}
-      <Link to={"/basket"}>Basket</Link>
+    <div className="header">
+      <NavItems token={token} user={user} handleLogout={handleLogout} />
     </div>
   );
 }
