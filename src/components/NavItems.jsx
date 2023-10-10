@@ -89,7 +89,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/orders" ? "active-link" : ""
                       }
                     >
-                      Basket
+                      Orders
                     </Link>
                   </li>
                 </>
