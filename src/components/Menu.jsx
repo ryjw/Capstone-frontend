@@ -13,7 +13,7 @@ export default function Menu() {
           <h1 className="title" id="main-page-title">
             Menu
           </h1>{" "}
-          <div className="grid-container">
+          <div id="grid-container">
             {items.map((item) => {
               return (
                 <Item
