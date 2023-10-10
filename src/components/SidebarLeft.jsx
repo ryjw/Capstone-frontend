@@ -20,7 +20,7 @@ export default function SidebarLeft() {
         >
           <img
             className="sidebar-left-item-photos"
-            src="../../public/Donut.jpg"
+            src="/Donut.jpg"
             alt="donut photo"
           />
           <h2 className="sidebar-left-item-headers">Featured Favorites</h2>
@@ -33,7 +33,7 @@ export default function SidebarLeft() {
         >
           <img
             className="sidebar-left-item-photos"
-            src="../../public/Muffin.jpg"
+            src="/Muffin.jpg"
             alt="muffin photo"
           />
           <h2 className="sidebar-left-item-headers">Breakfast</h2>
@@ -41,7 +41,7 @@ export default function SidebarLeft() {
         <div className="sidebar-left-item-containers" id="sidebar-left-burgers">
           <img
             className="sidebar-left-item-photos"
-            src="../../public/Burger.jpg"
+            src="/Burger.jpg"
             alt="burger photo"
           />
           <h2 className="sidebar-left-item-headers">Burgers</h2>
@@ -49,7 +49,7 @@ export default function SidebarLeft() {
         <div className="sidebar-left-item-containers" id="sidebar-left-fries">
           <img
             className="sidebar-left-item-photos"
-            src="../../public/LargeFries.jpg"
+            src="/LargeFries.jpg"
             alt="fries photo"
           />
           <h2 className="sidebar-left-item-headers">Fries</h2>
@@ -57,7 +57,7 @@ export default function SidebarLeft() {
         <div className="sidebar-left-item-containers" id="sidebar-left-sweets">
           <img
             className="sidebar-left-item-photos"
-            src="../../public/Brownie.jpg"
+            src="/Brownie.jpg"
             alt="brownie photo"
           />
           <h2 className="sidebar-left-item-headers">Sweets & Treats</h2>
@@ -68,7 +68,7 @@ export default function SidebarLeft() {
         >
           <img
             className="sidebar-left-item-photos"
-            src="../../public/LargeCoke.jpg"
+            src="/LargeCoke.jpg"
             alt="beverage photo"
           />
           <h2 className="sidebar-left-item-headers">Beverages</h2>
