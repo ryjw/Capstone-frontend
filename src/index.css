@@ -19,10 +19,6 @@ a {
   text-decoration: none;
 }
 
-.item-image {
-  width: 200px;
-}
-
 .plusminus {
   font-size: 20px;
 }
@@ -33,5 +29,5 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* css that will center the content in the middle of the page */
+ 
 }

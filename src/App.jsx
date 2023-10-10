@@ -27,6 +27,8 @@ function App() {
     const info = await res.json();
     if (info.success) {
       setUser(info.user);
+    } else {
+      console.log(info);
     }
   }
 
@@ -61,6 +63,10 @@ function App() {
 
   useEffect(() => {
     fetchItems();
+  }, []);
+
+  useEffect(() => {
+    fetchUser();
   }, []);
 
   useEffect(() => {

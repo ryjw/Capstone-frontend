@@ -1,34 +1,51 @@
 .side-bar-container {
-    max-width: 30%;
-    margin: 20px 0px 20px 20px;
-  }
-  
-  .side-bar-links li {
-    list-style-type: none;
+  max-width: 30%;
+  margin: 20px 0px 20px 20px;
+}
+
+.side-bar-links li {
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 5px 0px 5px 0px;
+}
+
+.favorites {
+  max-width: 30%;
+  margin: 20px 0px 20px 20px;
+}
+
+.favorites h1 {
+  margin-left: 160px;
+}
+
+.menu-flex {
+  max-width: 40%;
+  margin: 10px 20px 20px auto; /* Adjust the margin to move it to the right */
+}
+
+.grid-item {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    margin: 5px 0px 5px 0px;
-  }
-  
-  .favorites {
-    max-width: 30%;
-    margin: 20px 0px 20px 20px;
-  }
-  
-  .favorites h1 {
-    margin-left: 160px;
-  }
-  
-  .menu-flex {
-    max-width: 40%;
-    margin: 10px 20px 20px auto; /* Adjust the margin to move it to the right */
-  }
-  
-  .grid-item {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 24px; /* Adjust the font size */
+    text-align: center;
+    font-size: 24px;
+    width: 100%; /* Ensure each item takes up the entire grid cell */
+    padding: 10px; /* Add padding for spacing between items */
+  }
+  
+  .item-image {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px; /* Add some spacing between grid items */
+    max-width: 80%; /* Adjust the maximum width as needed */
+    margin: 10px auto; /* Center the grid horizontally */
   }
   

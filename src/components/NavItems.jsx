@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useOutletContext } from "react-router-dom";
 import "../assets/navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-function NavItems() {
+function NavItems({ token, handleLogout, user }) {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
@@ -21,12 +22,14 @@ function NavItems() {
             className={`menu-toggle ${isOpen ? "active" : ""}`}
             onClick={toggleNavbar}
           >
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
+            {isOpen ? (
+              <FaTimes id="exit-bar" />
+            ) : (
+              <FaBars id="entry-bar" />
+            )}
           </div>
           <div className={`nav-links ${isOpen ? "active" : ""}`}>
-            <ul>
+            <ul className="links">
               <li>
                 <Link
                   to="/"
@@ -35,34 +38,48 @@ function NavItems() {
                   Our Menu
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/login"
-                  className={location.pathname === "/login" ? "active-link" : ""}
-                >
-                  Login
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/register"
-                  className={location.pathname === "/register" ? "active-link" : ""}
-                >
-                  SignUp!
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="checkout"
-                  className={location.pathname === "/checkout" ? "active-link" : ""}
-                >
-                  Checkout
-                </Link>
-              </li>
+              {!token && (
+                <>
+                  <li>
+                    <Link
+                      to="/login"
+                      className={
+                        location.pathname === "/login" ? "active-link" : ""
+                      }
+                    >
+                      Login
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/register"
+                      className={
+                        location.pathname === "/register" ? "active-link" : ""
+                      }
+                    >
+                      SignUp!
+                    </Link>
+                  </li>
+                </>
+              )}
+              {token && (
+                <>
+                  <li>
+                    <span>Hello {user.username}</span>
+                  </li>
+                  <li>
+                    <Link to="/" onClick={handleLogout} className="">
+                      Logout
+                    </Link>
+                  </li>
+                </>
+              )}
               <li>
                 <Link
                   to="/basket"
-                  className={location.pathname === "/basket" ? "active-link" : ""}
+                  className={
+                    location.pathname === "/basket" ? "active-link" : ""
+                  }
                 >
                   Basket
                 </Link>
@@ -70,7 +87,9 @@ function NavItems() {
               <li>
                 <Link
                   to="/about"
-                  className={location.pathname === "/about" ? "active-link" : ""}
+                  className={
+                    location.pathname === "/about" ? "active-link" : ""
+                  }
                 >
                   About Our Food
                 </Link>
@@ -78,7 +97,9 @@ function NavItems() {
               <li>
                 <Link
                   to="/locate"
-                  className={location.pathname === "/locate" ? "active-link" : ""}
+                  className={
+                    location.pathname === "/locate" ? "active-link" : ""
+                  }
                 >
                   Locate
                 </Link>
@@ -86,7 +107,9 @@ function NavItems() {
               <li>
                 <Link
                   to="/deals"
-                  className={location.pathname === "/deals" ? "active-link" : ""}
+                  className={
+                    location.pathname === "/deals" ? "active-link" : ""
+                  }
                 >
                   Exclusive Deals
                 </Link>
@@ -94,7 +117,9 @@ function NavItems() {
               <li>
                 <Link
                   to="/careers"
-                  className={location.pathname === "/careers" ? "active-link" : ""}
+                  className={
+                    location.pathname === "/careers" ? "active-link" : ""
+                  }
                 >
                   Careers
                 </Link>

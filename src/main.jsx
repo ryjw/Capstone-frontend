@@ -11,6 +11,9 @@ import Register from "./components/Register.jsx";
 import Checkout from "./components/Checkout.jsx";
 import CompletedOrders from "./components/CompletedOrders.jsx";
 import ItemDetail from "./components/ItemDetail.jsx";
+import About from "./components/About.jsx";
+import Careers from "./components/Careers.jsx";
+import Locate from "./components/Locate.jsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +27,9 @@ const router = createBrowserRouter([
       { path: "checkout", element: <Checkout /> },
       { path: "orders", element: <CompletedOrders /> },
       { path: "item/:itemId", element: <ItemDetail /> },
+      { path: "about", element: <About /> },
+      { path: "careers", element: <Careers /> },
+      { path: "locate", element: <Locate /> },
       { path: "*", element: <NotFound /> },
     ],
   },
