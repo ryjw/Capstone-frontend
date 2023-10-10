@@ -2,11 +2,20 @@ import React from "react";
 import NavItems from "./NavItems";
 import "../assets/navbar.css";
 
-export default function Navbar({ token, user, setUser, setToken }) {
+export default function Navbar({
+  token,
+  user,
+  setUser,
+  setToken,
+  setOrder,
+  setOrderItems,
+}) {
   function handleLogout() {
     setUser("");
     setToken("");
     localStorage.clear();
+    setOrder({});
+    setOrderItems([]);
   }
 
   return (
