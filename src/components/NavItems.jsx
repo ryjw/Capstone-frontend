@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useOutletContext } from "react-router-dom";
 import "../assets/navbar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function NavItems({ token, handleLogout, user }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,12 +22,14 @@ function NavItems({ token, handleLogout, user }) {
             className={`menu-toggle ${isOpen ? "active" : ""}`}
             onClick={toggleNavbar}
           >
-            <div className="bar"></div>
-            <div className="bar"></div>
-            <div className="bar"></div>
+            {isOpen ? (
+              <FaTimes id="exit-bar" />
+            ) : (
+              <FaBars id="entry-bar" />
+            )}
           </div>
           <div className={`nav-links ${isOpen ? "active" : ""}`}>
-            <ul>
+            <ul className="links">
               <li>
                 <Link
                   to="/"
