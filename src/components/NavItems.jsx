@@ -22,11 +22,7 @@ function NavItems({ token, handleLogout, user }) {
             className={`menu-toggle ${isOpen ? "active" : ""}`}
             onClick={toggleNavbar}
           >
-            {isOpen ? (
-              <FaTimes id="exit-bar" />
-            ) : (
-              <FaBars id="entry-bar" />
-            )}
+            {isOpen ? <FaTimes id="exit-bar" /> : <FaBars id="entry-bar" />}
           </div>
           <div className={`nav-links ${isOpen ? "active" : ""}`}>
             <ul className="links">
@@ -84,6 +80,21 @@ function NavItems({ token, handleLogout, user }) {
                   Basket
                 </Link>
               </li>
+              {token && (
+                <>
+                  <li>
+                    <Link
+                      to="/orders"
+                      className={
+                        location.pathname === "/orders" ? "active-link" : ""
+                      }
+                    >
+                      Basket
+                    </Link>
+                  </li>
+                </>
+              )}
+
               <li>
                 <Link
                   to="/about"
