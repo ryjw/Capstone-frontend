@@ -83,7 +83,14 @@ function App() {
 
   return (
     <>
-      <Navbar token={token} user={user} setUser={setUser} setToken={setToken} />
+      <Navbar
+        token={token}
+        user={user}
+        setUser={setUser}
+        setToken={setToken}
+        setOrder={setOrder}
+        setOrderItems={setOrderItems}
+      />
       <Outlet
         context={{
           setToken,
@@ -93,6 +100,7 @@ function App() {
           orderItems,
           fetchOpenOrder,
           token,
+          user,
         }}
       />
     </>

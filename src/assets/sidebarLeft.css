@@ -1,0 +1,34 @@
+/* sidebar left */
+
+#left-sidebar-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  color: #292929;
+}
+
+#featured-container {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#left-sidebar-main-container {
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.sidebar-left-item-containers {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.sidebar-left-item-photos {
+  height: 60px;
+}
+
+.sidebar-left-item-headers {
+  font-weight: normal;
+  font-size: 18px;
+}

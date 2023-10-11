@@ -16,17 +16,16 @@ function NavItems({ token, handleLogout, user }) {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-container">
-            <h1 className="logo">Logo</h1>
+            <img
+              className="logo"
+              src="https://i.redd.it/dy9l3iww2fe21.png"
+            ></img>
           </div>
           <div
             className={`menu-toggle ${isOpen ? "active" : ""}`}
             onClick={toggleNavbar}
           >
-            {isOpen ? (
-              <FaTimes id="exit-bar" />
-            ) : (
-              <FaBars id="entry-bar" />
-            )}
+            {isOpen ? <FaTimes id="exit-bar" /> : <FaBars id="entry-bar" />}
           </div>
           <div className={`nav-links ${isOpen ? "active" : ""}`}>
             <ul className="links">
@@ -84,6 +83,21 @@ function NavItems({ token, handleLogout, user }) {
                   Basket
                 </Link>
               </li>
+              {token && (
+                <>
+                  <li>
+                    <Link
+                      to="/orders"
+                      className={
+                        location.pathname === "/orders" ? "active-link" : ""
+                      }
+                    >
+                      Orders
+                    </Link>
+                  </li>
+                </>
+              )}
+
               <li>
                 <Link
                   to="/about"

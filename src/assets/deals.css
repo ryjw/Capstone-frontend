@@ -1,0 +1,37 @@
+.exclusive-deals {
+  margin: 20px;
+}
+
+.exclusive-deal {
+  margin-bottom: 30px;
+}
+
+.deal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff5722;
+}
+
+.deal-description {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #333;
+}
+
+.deal-price {
+  font-size: 20px;
+  color: #4caf50;
+}
+
+.deal-origin {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #777;
+}
+
+.deal-preparation {
+  font-size: 16px;
+  margin-top: 10px;
+  font-family: "Chelsea Market", cursive;
+}
+

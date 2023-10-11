@@ -15,6 +15,8 @@ import About from "./components/About.jsx";
 import Careers from "./components/Careers.jsx";
 import Locate from "./components/Locate.jsx";
 import StripeContainer from "./components/StripeContainer.jsx";
+import Deals from "./components/Deals.jsx";
+
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,7 @@ const router = createBrowserRouter([
       { path: "locate", element: <Locate /> },
       { path: "*", element: <NotFound /> },
       { path: "payment", element: <StripeContainer /> },
+      {path: "deals", element: <Deals /> }
     ],
   },
 ]);
