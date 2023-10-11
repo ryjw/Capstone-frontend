@@ -31,12 +31,26 @@ a {
   text-align: center;
 }
 
+/* navbar */
+
+.navbar-container {
+  max-width: 1400px;
+  /* border: 1px solid blue; */
+  display: flex;
+}
+
 /* main page */
 
 .main-container {
   display: flex;
   margin: 100px;
-  max-width: 1300px;
+  max-width: 1400px;
+  /* border: 1px solid blue; */
+}
+
+.main-container h1 {
+  height: 56px;
+  text-align: center;
 }
 
 #main-page-menu-items-container {
@@ -48,6 +62,16 @@ a {
 
 #main-page-title {
   font-size: 30px;
+}
+
+/* menu items grid */
+
+#grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 20px;
 }
 
 /* sidebar left */
@@ -83,12 +107,4 @@ a {
 .sidebar-left-item-headers {
   font-weight: normal;
   font-size: 18px;
-}
-
-/* menu items grid */
-
-#grid-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
 }
