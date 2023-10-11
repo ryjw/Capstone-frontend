@@ -14,6 +14,7 @@ import ItemDetail from "./components/ItemDetail.jsx";
 import About from "./components/About.jsx";
 import Careers from "./components/Careers.jsx";
 import Locate from "./components/Locate.jsx";
+import StripeContainer from "./components/StripeContainer.jsx";
 import Deals from "./components/Deals.jsx";
 import Breakfast from "./components/Breakfast.jsx";
 import Burgers from "./components/Burgers.jsx";
@@ -45,18 +46,6 @@ const router = createBrowserRouter([
       { path: "locate", element: <Locate /> },
       { path: "*", element: <NotFound /> },
       { path: "deals", element: <Deals /> },
-      { path: "breakfast", element: <Breakfast /> },
-      { path: "burgers", element: <Burgers /> },
-      { path: "sandwiches", element: <Sandwiches /> },
-      { path: "fries", element: <Fries /> },
-      { path: "pizzas", element: <Pizzas /> },
-      { path: "hotdogs", element: <Hotdogs /> },
-      { path: "salads", element: <Salads /> },
-      { path: "sides", element: <Sides /> },
-      { path: "treats", element: <Treats /> },
-      { path: "milkshakes", element: <Milkshakes /> },
-      { path: "smoothies", element: <Smoothies /> },
-      { path: "softdrinks", element: <Softdrinks /> },
     ],
   },
 ]);

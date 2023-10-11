@@ -1,4 +1,4 @@
-import { NavLink, useOutletContext } from "react-router-dom";
+import { NavLink, useOutletContext, Link } from "react-router-dom";
 import { FiPlus, FiMinus, FiTrash, FiTrash2 } from "react-icons/fi";
 import { API } from "../API/api.js";
 
@@ -114,6 +114,9 @@ export default function Basket() {
           </p>
         </div>
       </div>
+      <Link to="/payment">
+        <button>Checkout</button>
+      </Link>
     </div>
   ) : (
     <div>

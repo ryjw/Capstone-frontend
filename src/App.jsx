@@ -100,6 +100,7 @@ function App() {
           orderItems,
           fetchOpenOrder,
           token,
+          user,
         }}
       />
     </>
