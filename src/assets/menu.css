@@ -1,3 +1,38 @@
+/* menu item pages */
+
+.main-containers {
+  display: flex;
+  margin: 100px;
+  max-width: 1400px;
+}
+
+.main-containers h1 {
+  height: 56px;
+  text-align: center;
+}
+
+.display-items-containers {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 40px; */
+  /* border: 1px solid green; */
+}
+
+.display-items-titles {
+  font-size: 30px;
+  /* border: 1px solid purple; */
+}
+
+.grid-containers {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  align-items: center;
+  gap: 20px;
+  /* border: 1px solid blue; */
+}
+
 .side-bar-container {
   max-width: 30%;
   margin: 20px 0px 20px 20px;
@@ -11,41 +46,40 @@
   margin: 5px 0px 5px 0px;
 }
 
-.favorites {
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  width: 100%;
+  padding: 10px;
+}
+
+.item-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* .favorites {
   max-width: 30%;
   margin: 20px 0px 20px 20px;
-}
+} */
 
-.favorites h1 {
+/* .favorites h1 {
   margin-left: 160px;
-}
+} */
 
-.menu-flex {
+/* .menu-flex {
   max-width: 40%;
-  margin: 10px 20px 20px auto; /* Adjust the margin to move it to the right */
-}
+  margin: 10px 20px 20px auto;
+} */
 
-.grid-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 24px;
-    width: 100%; /* Ensure each item takes up the entire grid cell */
-    padding: 10px; /* Add padding for spacing between items */
-  }
-  
-  .item-image {
-    width: 200px;
-    height: auto;
-    margin-bottom: 10px; /* Add spacing below the image */
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px; /* Add some spacing between grid items */
-    max-width: 80%; /* Adjust the maximum width as needed */
-    margin: 10px auto; /* Center the grid horizontally */
-  }
-  
+/* .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  max-width: 80%;
+  margin: 10px auto;
+} */

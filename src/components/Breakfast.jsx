@@ -11,7 +11,7 @@ export default function Menu() {
       <div className="main-containers">
         <SidebarLeft />
         <div className="display-items-containers">
-          <h1 className="display-items-titles">Menu</h1>
+          <h1 className="display-items-titles">Menu</h1>{" "}
           <div className="grid-containers">
             {items.map((item) => {
               return (
