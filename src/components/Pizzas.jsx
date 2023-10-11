@@ -4,20 +4,20 @@ import "../assets/menu.css";
 import "../assets/sidebarLeft.css";
 import SidebarLeft from "./SidebarLeft.jsx";
 
-export default function Breakfast() {
+export default function Pizzas() {
   const { items, token, addToBasket } = useOutletContext();
 
-  // filter items that belong to the "Breakfast" category
-  const breakfastItems = items.filter((item) => item.category === "Breakfast");
+  // filter items that belong to the "Pizza" category
+  const pizzaItems = items.filter((item) => item.category === "Pizza");
 
   return (
     <>
       <div className="main-containers">
         <SidebarLeft />
         <div className="display-items-containers">
-          <h1 className="display-items-titles">Breakfast</h1>
+          <h1 className="display-items-titles">Pizzas</h1>
           <div className="grid-containers">
-            {breakfastItems.map((item) => {
+            {pizzaItems.map((item) => {
               return (
                 <Item
                   item={item}
