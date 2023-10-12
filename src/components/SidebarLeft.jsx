@@ -1,16 +1,7 @@
 import { useOutletContext, NavLink } from "react-router-dom";
 import { API } from "../API/api.js";
-// import muffin from "../../public/Muffin.jpg";
-// import burger from "../../public/Burger.jpg";
-// import fries from "../../public/LargeFries.jpg";
-// import brownie from "../../public/Brownie.jpg";
-// import coke from "../../public/LargeCoke.jpg";
-// import donut from "../../public/Donut.jpg";
 
 export default function SidebarLeft() {
-  // deconstruct from the outlet
-  //const { items } = useOutletContext();
-
   return (
     <div id="left-sidebar-container">
       <div id="featured-container">
@@ -93,6 +84,71 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
+          to="/pizzas"
+          id="navlink-pizzas"
+          className="sidebar-left-navlinks"
+        >
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-pizzas"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Pizza.jpg"
+              alt="pizza photo"
+            />
+            <h2 className="sidebar-left-item-headers">Pizzas</h2>
+          </div>
+        </NavLink>
+        <NavLink
+          to="/hotdogs"
+          id="navlink-hotdogs"
+          className="sidebar-left-navlinks"
+        >
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-hotdogs"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Hotdog.jpg"
+              alt="hotdog photo"
+            />
+            <h2 className="sidebar-left-item-headers">Hotdogs</h2>
+          </div>
+        </NavLink>
+        <NavLink
+          to="/salads"
+          id="navlink-salads"
+          className="sidebar-left-navlinks"
+        >
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-salads"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Salad.jpg"
+              alt="salad photo"
+            />
+            <h2 className="sidebar-left-item-headers">Salads</h2>
+          </div>
+        </NavLink>
+        <NavLink
+          to="/sides"
+          id="navlink-sides"
+          className="sidebar-left-navlinks"
+        >
+          <div className="sidebar-left-item-containers" id="sidebar-left-sides">
+            <img
+              className="sidebar-left-item-photos"
+              src="/Side.jpg"
+              alt="side photo"
+            />
+            <h2 className="sidebar-left-item-headers">Sides</h2>
+          </div>
+        </NavLink>
+        <NavLink
           to="/treats"
           id="navlink-treats"
           className="sidebar-left-navlinks"
@@ -109,17 +165,57 @@ export default function SidebarLeft() {
             <h2 className="sidebar-left-item-headers">Treats</h2>
           </div>
         </NavLink>
-        <div
-          className="sidebar-left-item-containers"
-          id="sidebar-left-beverages"
+        <NavLink
+          to="/milkshakes"
+          id="navlink-milkshakes"
+          className="sidebar-left-navlinks"
         >
-          <img
-            className="sidebar-left-item-photos"
-            src="/LargeCoke.jpg"
-            alt="beverage photo"
-          />
-          <h2 className="sidebar-left-item-headers">Soft Drinks</h2>
-        </div>
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-milkshakes"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Milkshake.jpg"
+              alt="milkshake photo"
+            />
+            <h2 className="sidebar-left-item-headers">Milkshakes</h2>
+          </div>
+        </NavLink>
+        <NavLink
+          to="/smoothies"
+          id="navlink-smoothies"
+          className="sidebar-left-navlinks"
+        >
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-smoothies"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Smoothie.jpg"
+              alt="smoothie photo"
+            />
+            <h2 className="sidebar-left-item-headers">Smoothies</h2>
+          </div>
+        </NavLink>
+        <NavLink
+          to="/softdrinks"
+          id="navlink-softdrinks"
+          className="sidebar-left-navlinks"
+        >
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-softdrinks"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/LargeCoke.jpg"
+              alt="softdrink photo"
+            />
+            <h2 className="sidebar-left-item-headers">Soft Drinks</h2>
+          </div>
+        </NavLink>
       </div>
     </div>
   );
