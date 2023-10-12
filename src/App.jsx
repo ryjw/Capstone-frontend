@@ -99,6 +99,7 @@ function App() {
           setOrder,
           orderItems,
           fetchOpenOrder,
+          setOrderItems,
           token,
           user,
         }}
