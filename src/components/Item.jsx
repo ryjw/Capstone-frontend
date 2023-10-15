@@ -9,7 +9,7 @@ export default function Item({ item, token, addToBasket }) {
           src={item.image}
           alt={`${item.name} photo`}
         />
-        <h3>{item.name}</h3>
+        <h3 className="item-header">{item.name}</h3>
       </div>
     </NavLink>
   );

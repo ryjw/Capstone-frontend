@@ -24,8 +24,15 @@
   padding: 10px 10px;
 }
 
+.sidebar-left-item-containers:hover {
+  border-left: 3px solid red;
+}
+
 .sidebar-left-item-photos {
   height: 60px;
+  width: 100px;
+  object-fit: contain;
+  margin-right: 5px;
 }
 
 .sidebar-left-item-headers {
