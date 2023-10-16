@@ -9,6 +9,8 @@ export default function Navbar({
   setToken,
   setOrder,
   setOrderItems,
+  items,
+  orderItems,
 }) {
   function handleLogout() {
     setUser("");
@@ -20,7 +22,13 @@ export default function Navbar({
 
   return (
     <div className="header">
-      <NavItems token={token} user={user} handleLogout={handleLogout} />
+      <NavItems
+        token={token}
+        user={user}
+        handleLogout={handleLogout}
+        items={items}
+        orderItems={orderItems}
+      />
     </div>
   );
 }
