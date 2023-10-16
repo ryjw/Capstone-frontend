@@ -7,13 +7,13 @@ export default function ItemDetail() {
   const { token, items, orderItems, order, fetchOpenOrder } =
     useOutletContext();
   const [message, setMessage] = useState("");
-  console.log(itemId, items);
   const item = items.find((item) => item.id === itemId);
 
   async function addToBasket() {
-    console.log("adding");
     const isExisting = orderItems.find((item) => itemId === item.menuItemId);
-
+    if (!token) {
+      setMessage("Please log in to add to your basket!");
+    }
     if (isExisting) {
       const res = await fetch(`${API}/orders/items/${isExisting.id}`, {
         method: "PUT",

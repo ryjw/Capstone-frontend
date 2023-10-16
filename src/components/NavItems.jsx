@@ -56,7 +56,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/register" ? "active-link" : ""
                       }
                     >
-                      SignUp!
+                      Sign Up
                     </Link>
                   </li>
                 </>
@@ -73,18 +73,18 @@ function NavItems({ token, handleLogout, user }) {
                   </li>
                 </>
               )}
-              <li>
-                <Link
-                  to="/basket"
-                  className={
-                    location.pathname === "/basket" ? "active-link" : ""
-                  }
-                >
-                  Basket
-                </Link>
-              </li>
               {token && (
                 <>
+                  <li>
+                    <Link
+                      to="/basket"
+                      className={
+                        location.pathname === "/basket" ? "active-link" : ""
+                      }
+                    >
+                      Basket
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       to="/orders"
