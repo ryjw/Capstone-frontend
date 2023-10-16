@@ -3,19 +3,23 @@
 #left-sidebar-container {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  /* max-width: 300px; */
+  width: auto;
   color: #292929;
+  /* border: 1px solid blue; */
 }
 
 #featured-container {
   border: 1px solid gray;
   border-radius: 5px;
   margin-bottom: 20px;
+  background-color: white;
 }
 
 #left-sidebar-main-container {
   border: 1px solid gray;
   border-radius: 5px;
+  background-color: white;
 }
 
 .sidebar-left-item-containers {

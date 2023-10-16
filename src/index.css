@@ -18,11 +18,14 @@ a {
   font-size: 20px;
 }
 
-.flex-center {
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+/* body {
+  background-color: #1360d7;
+} */
 
+body {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(27, 221, 228, 1),
+    rgba(19, 96, 215, 1)
+  );
+}

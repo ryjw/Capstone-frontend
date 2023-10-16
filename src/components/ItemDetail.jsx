@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useOutletContext, useParams } from "react-router-dom";
 import { API } from "../API/api";
+import "../assets/itemDetail.css";
 
 export default function ItemDetail() {
   const { itemId } = useParams();
@@ -53,16 +54,24 @@ export default function ItemDetail() {
   return (
     item && (
       <div className="flex-center">
-        <div className="grid-container">
-          <img className="item-image" src={`/Burger.jpg`} alt="food item" />
-          <div className="grid-item">
-            <h3>{item.name}</h3>
+        <div className="item-detail-grid-container">
+          <img
+            className="item-detail-images"
+            src={item.image}
+            alt={`${item.name} photo`}
+          />
+          <div className="item-detail-name-price-container">
+            <h3 className="item-detail-name">{item.name}</h3>
+            <span>-</span>
+            <h3 className="item-detail-price">${item.price.toFixed(2)}</h3>
           </div>
-          <div className="grid-item">
-            <h3>${item.price.toFixed(2)}</h3>
-          </div>
-          <p>{item.description}</p>
-          <button onClick={addToBasket}>Add to basket!</button>
+          <p className="item-detail-description">{item.description}</p>
+          <button
+            className="item-detail-add-to-basket-button"
+            onClick={addToBasket}
+          >
+            Add to basket!
+          </button>
           <p>{message}</p>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import { API } from "./API/api.js";
+import Footer from "./components/Footer";
 
 function App() {
   // state for ordering
@@ -104,6 +105,7 @@ function App() {
           user,
         }}
       />
+      <Footer />
     </>
   );
 }

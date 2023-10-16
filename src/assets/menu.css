@@ -11,6 +11,9 @@
   display: flex;
   /* display: inline-flex; */
   flex-direction: column;
+  background-color: white;
+  margin-left: 20px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
   /* align-items: center; */
   /* gap: 40px; */
   /* border: 1px solid green; */

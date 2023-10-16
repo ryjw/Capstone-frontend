@@ -18,7 +18,8 @@ function NavItems({ token, handleLogout, user }) {
           <div className="logo-container">
             <img
               className="logo"
-              src="https://i.redd.it/dy9l3iww2fe21.png"
+              // src="https://i.redd.it/dy9l3iww2fe21.png"
+              src="/KrustyKrabLogo.png"
             ></img>
           </div>
           <div

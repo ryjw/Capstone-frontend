@@ -1,6 +1,7 @@
 /* Add your styles for desktop view here */
 .navbar {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: rgba(27, 221, 228, 1);
   color: #000000;
   padding: 20px 0;
   flex-direction: row;
