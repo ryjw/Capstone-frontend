@@ -23,7 +23,6 @@ export default function MenuCategory() {
   }
 
   const searchCategory = categoryArray.join("");
-  console.log(searchCategory, category);
 
   const filteredItems = items.filter(
     (item) => item.category === searchCategory
