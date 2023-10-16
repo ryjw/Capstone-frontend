@@ -15,7 +15,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  border: 1px solid pink;
+  /* border: 1px solid pink; */
 }
 
 .item-detail-price {
@@ -24,25 +24,28 @@
 
 .item-detail-grid-container {
   /* border: 1px solid blueviolet; */
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
   background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
   margin: 70px auto;
 }
 
 .item-detail-images {
   height: 300px;
+  margin-top: 15px;
   /* border: 1px solid orange; */
 }
 
 .item-detail-description {
   width: 300px;
-  /* text-wrap: wrap; */
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
-  border: 1px solid brown;
+  text-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  /* border: 1px solid brown; */
 }
 
 .item-detail-add-to-basket-button {

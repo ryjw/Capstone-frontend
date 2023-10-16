@@ -26,6 +26,10 @@
   height: 200px;
 }
 
+.navbar-titles {
+  font-size: 18px;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;

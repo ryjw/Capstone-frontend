@@ -70,7 +70,7 @@ export default function ItemDetail() {
             className="item-detail-add-to-basket-button"
             onClick={addToBasket}
           >
-            Add to basket!
+            Add to Cart
           </button>
           <p>{message}</p>
         </div>
