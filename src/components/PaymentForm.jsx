@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import { API } from "../API/api.js";
@@ -39,6 +39,7 @@ const PaymentForm = () => {
   const stripe = useStripe();
   const elements = useElements();
   const [orderTotal, setOrderTotal] = useState(0);
+  const navigate = useNavigate();
 
   function getItemInfo(id) {
     const item = items.find((x) => id === x.id);
@@ -113,6 +114,7 @@ const PaymentForm = () => {
       setOrder(info2.order);
       setOrderItems([]);
       fetchOpenOrder();
+      setTimeout(navigate("/orders"), 1000);
     }
   };
   return (

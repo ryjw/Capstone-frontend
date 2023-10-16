@@ -28,6 +28,8 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
           })
           .reduce((accumulator, currentValue) => accumulator + currentValue)
       );
+    } else {
+      setOrderTotal(0);
     }
   }, [orderItems]);
 
