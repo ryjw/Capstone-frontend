@@ -19,7 +19,7 @@ export default function SidebarLeft() {
       </div>
       <div id="left-sidebar-main-container">
         <NavLink
-          to="/breakfast"
+          to="/menu/breakfast"
           id="navlink-breakfast"
           className="sidebar-left-navlinks"
         >
@@ -36,7 +36,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/burgers"
+          to="/menu/burgers"
           id="navlink-burgers"
           className="sidebar-left-navlinks"
         >
@@ -53,7 +53,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/sandwiches"
+          to="/menu/sandwiches"
           id="navlink-sandwiches"
           className="sidebar-left-navlinks"
         >
@@ -70,7 +70,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/fries"
+          to="/menu/fries"
           id="navlink-fries"
           className="sidebar-left-navlinks"
         >
@@ -84,7 +84,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/pizzas"
+          to="/menu/pizzas"
           id="navlink-pizzas"
           className="sidebar-left-navlinks"
         >
@@ -101,7 +101,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/hotdogs"
+          to="/menu/hotdogs"
           id="navlink-hotdogs"
           className="sidebar-left-navlinks"
         >
@@ -118,7 +118,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/salads"
+          to="/menu/salads"
           id="navlink-salads"
           className="sidebar-left-navlinks"
         >
@@ -135,7 +135,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/sides"
+          to="/menu/sides"
           id="navlink-sides"
           className="sidebar-left-navlinks"
         >
@@ -149,7 +149,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/treats"
+          to="/menu/treats"
           id="navlink-treats"
           className="sidebar-left-navlinks"
         >
@@ -166,7 +166,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/milkshakes"
+          to="/menu/milkshakes"
           id="navlink-milkshakes"
           className="sidebar-left-navlinks"
         >
@@ -183,7 +183,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/smoothies"
+          to="/menu/smoothies"
           id="navlink-smoothies"
           className="sidebar-left-navlinks"
         >
@@ -200,7 +200,7 @@ export default function SidebarLeft() {
           </div>
         </NavLink>
         <NavLink
-          to="/softdrinks"
+          to="/menu/softdrinks"
           id="navlink-softdrinks"
           className="sidebar-left-navlinks"
         >
