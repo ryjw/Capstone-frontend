@@ -3,19 +3,25 @@
 #left-sidebar-container {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
+  /* max-width: 300px; */
+  width: auto;
   color: #292929;
+  /* border: 1px solid blue; */
 }
 
 #featured-container {
-  border: 1px solid gray;
-  border-radius: 5px;
+  /* border: 1px solid gray; */
+  border-radius: 20px;
   margin-bottom: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 #left-sidebar-main-container {
-  border: 1px solid gray;
-  border-radius: 5px;
+  /* border: 1px solid gray; */
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .sidebar-left-item-containers {

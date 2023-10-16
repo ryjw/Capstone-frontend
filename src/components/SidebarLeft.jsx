@@ -3,7 +3,7 @@ import { API } from "../API/api.js";
 
 export default function SidebarLeft() {
   return (
-    <div id="left-sidebar-container">
+    <div id="left-sidebar-container" className="left-sidebar-containers">
       <div id="featured-container">
         <div
           className="sidebar-left-item-containers"

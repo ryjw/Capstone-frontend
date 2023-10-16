@@ -18,7 +18,8 @@ function NavItems({ token, handleLogout, user }) {
           <div className="logo-container">
             <img
               className="logo"
-              src="https://i.redd.it/dy9l3iww2fe21.png"
+              // src="https://i.redd.it/dy9l3iww2fe21.png"
+              src="/KrustyKrabLogo.png"
             ></img>
           </div>
           <div
@@ -34,7 +35,7 @@ function NavItems({ token, handleLogout, user }) {
                   to="/"
                   className={location.pathname === "/" ? "active-link" : ""}
                 >
-                  Our Menu
+                  <span className="navbar-titles">Our Menu</span>
                 </Link>
               </li>
               {!token && (
@@ -46,7 +47,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/login" ? "active-link" : ""
                       }
                     >
-                      Login
+                      <span className="navbar-titles">Login</span>
                     </Link>
                   </li>
                   <li>
@@ -56,7 +57,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/register" ? "active-link" : ""
                       }
                     >
-                      Sign Up
+                      <span className="navbar-titles">Sign Up</span>
                     </Link>
                   </li>
                 </>
@@ -68,7 +69,7 @@ function NavItems({ token, handleLogout, user }) {
                   </li>
                   <li>
                     <Link to="/" onClick={handleLogout} className="">
-                      Logout
+                      <span className="navbar-titles">Logout</span>
                     </Link>
                   </li>
                 </>
@@ -82,7 +83,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/basket" ? "active-link" : ""
                       }
                     >
-                      Basket
+                      <span className="navbar-titles">Basket</span>
                     </Link>
                   </li>
                   <li>
@@ -92,7 +93,7 @@ function NavItems({ token, handleLogout, user }) {
                         location.pathname === "/orders" ? "active-link" : ""
                       }
                     >
-                      Orders
+                      <span className="navbar-titles">Orders</span>
                     </Link>
                   </li>
                 </>
@@ -105,7 +106,7 @@ function NavItems({ token, handleLogout, user }) {
                     location.pathname === "/about" ? "active-link" : ""
                   }
                 >
-                  About Our Food
+                  <span className="navbar-titles">About Our Food</span>
                 </Link>
               </li>
               <li>
@@ -115,7 +116,7 @@ function NavItems({ token, handleLogout, user }) {
                     location.pathname === "/locate" ? "active-link" : ""
                   }
                 >
-                  Locate
+                  <span className="navbar-titles">Locate</span>
                 </Link>
               </li>
               <li>
@@ -125,7 +126,7 @@ function NavItems({ token, handleLogout, user }) {
                     location.pathname === "/deals" ? "active-link" : ""
                   }
                 >
-                  Exclusive Deals
+                  <span className="navbar-titles">Exclusive Deals</span>
                 </Link>
               </li>
               <li>
@@ -135,7 +136,7 @@ function NavItems({ token, handleLogout, user }) {
                     location.pathname === "/careers" ? "active-link" : ""
                   }
                 >
-                  Careers
+                  <span className="navbar-titles">Careers</span>
                 </Link>
               </li>
             </ul>
