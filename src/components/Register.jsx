@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { API } from "../API/api";
+import "../assets/login.css";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -50,14 +51,14 @@ export default function Register() {
   return (
     <div className="flex-center">
       <div>
-        <form
-          className="form"
+        <form className="forms"
           onSubmit={(e) => {
             handleRegister(e);
           }}
         >
           <div className="input-container">
             <input
+              className="login-form-inputs"
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Choose your username"
               value={username}
@@ -65,13 +66,14 @@ export default function Register() {
           </div>
           <div className="input-container">
             <input
+              className="login-form-inputs"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Choose your password"
               value={password}
             />
           </div>
           <div className="button-container">
-            <button>Sign Up</button>
+            <button id="login-button">Sign Up</button>
           </div>
         </form>
         <p>{error}</p>

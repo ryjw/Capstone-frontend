@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { API } from "../API/api.js";
+import "../assets/login.css";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -34,29 +35,31 @@ export default function Login() {
 
   return (
     <div className="flex-center">
-      <form
-        onSubmit={(e) => {
-          handleLogin(e);
-        }}
-      >
-        <div>
-          <input
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Username"
-            value={username}
-          />
-        </div>
-        <div>
-          <input
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Password"
-            value={password}
-          />
-        </div>
-        <div>
-          <button>Login</button>
-        </div>
-      </form>
+        <form id="login-form" className="forms"
+          onSubmit={(e) => {
+            handleLogin(e);
+          }}
+        >
+          <div className="input-container">
+            <input
+              className="login-form-inputs"
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+              value={username}
+            />
+          </div>
+          <div className="input-container">
+            <input
+              className="login-form-inputs"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+              value={password}
+            />
+          </div>
+          <div>
+            <button id="login-button">Login</button>
+          </div>
+        </form>
       <p>{error}</p>
     </div>
   );
