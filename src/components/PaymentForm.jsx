@@ -124,7 +124,7 @@ const PaymentForm = () => {
               <CardElement options={CARD_OPTIONS} />
             </div>
           </fieldset>
-          <button>Pay</button>
+          <button id="stripe-button">Pay</button>
         </form>
       ) : (
         <div>
