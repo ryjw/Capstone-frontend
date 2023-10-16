@@ -7,13 +7,13 @@ export default function ItemDetail() {
   const { token, items, orderItems, order, fetchOpenOrder } =
     useOutletContext();
   const [message, setMessage] = useState("");
-  console.log(itemId, items);
   const item = items.find((item) => item.id === itemId);
 
   async function addToBasket() {
-    console.log("adding");
     const isExisting = orderItems.find((item) => itemId === item.menuItemId);
-
+    if (!token) {
+      setMessage("Please log in to add to your basket!");
+    }
     if (isExisting) {
       const res = await fetch(`${API}/orders/items/${isExisting.id}`, {
         method: "PUT",
@@ -54,7 +54,7 @@ export default function ItemDetail() {
     item && (
       <div className="flex-center">
         <div className="grid-container">
-          <img className="item-image" src={`/Burger.jpg`} alt="food item" />
+          <img className="item-image" src={item.image} alt="food item" />
           <div className="grid-item">
             <h3>{item.name}</h3>
           </div>

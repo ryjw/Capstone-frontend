@@ -15,18 +15,7 @@ import Careers from "./components/Careers.jsx";
 import Locate from "./components/Locate.jsx";
 import StripeContainer from "./components/StripeContainer.jsx";
 import Deals from "./components/Deals.jsx";
-import Breakfast from "./components/Breakfast.jsx";
-import Burgers from "./components/Burgers.jsx";
-import Sandwiches from "./components/Sandwiches.jsx";
-import Fries from "./components/Fries.jsx";
-import Pizzas from "./components/Pizzas.jsx";
-import Hotdogs from "./components/Hotdogs.jsx";
-import Salads from "./components/Salads.jsx";
-import Sides from "./components/Sides.jsx";
-import Treats from "./components/Treats.jsx";
-import Milkshakes from "./components/Milkshakes.jsx";
-import Smoothies from "./components/Smoothies.jsx";
-import Softdrinks from "./components/Softdrink.jsx";
+import MenuCategory from "./components/MenuCategory.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +23,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Menu /> },
+      { path: "/menu/:category", element: <MenuCategory /> },
       { path: "basket", element: <Basket /> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
@@ -42,21 +32,9 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "careers", element: <Careers /> },
       { path: "locate", element: <Locate /> },
-      { path: "*", element: <NotFound /> },
       { path: "deals", element: <Deals /> },
-      { path: "breakfast", element: <Breakfast /> },
-      { path: "burgers", element: <Burgers /> },
-      { path: "sandwiches", element: <Sandwiches /> },
-      { path: "fries", element: <Fries /> },
-      { path: "pizzas", element: <Pizzas /> },
-      { path: "hotdogs", element: <Hotdogs /> },
-      { path: "salads", element: <Salads /> },
-      { path: "sides", element: <Sides /> },
-      { path: "treats", element: <Treats /> },
-      { path: "milkshakes", element: <Milkshakes /> },
-      { path: "smoothies", element: <Smoothies /> },
-      { path: "softdrinks", element: <Softdrinks /> },
       { path: "payment", element: <StripeContainer /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);

@@ -34,23 +34,23 @@ export default function CompletedOrders() {
   return orders.length === 0 ? (
     <h1>No orders completed yet</h1>
   ) : (
-    <div className="flex-center">
+    <div className="order-container">
       {orders.map((order) => {
         return (
-          <div key={order.id}>
+          <div className="order" key={order.id}>
             <h2>Order</h2>
             <p>Order id: {order.id}</p>
-            <p>Date placed: {new Date(order.createdAt).toString()}</p>
+            <p>Date placed: {new Date(order.createdAt).toDateString()}</p>
             <h2>Items:</h2>
             {order.orderItems.map((item) => {
               return (
                 <>
-                  <h3>{items.find((i) => i.id === item.menuItemId).name}</h3>
+                  <p>{items.find((i) => i.id === item.menuItemId).name}</p>
                   <p>Quantity: {item.quantity}</p>
                 </>
               );
             })}
-            <h2>Total Price: {order.totalPrice}</h2>
+            <h2>Total Price: ${order.totalPrice.toFixed(2)}</h2>
           </div>
         );
       })}

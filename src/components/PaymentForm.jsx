@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
@@ -38,19 +38,25 @@ const PaymentForm = () => {
   const [success, setSuccess] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
+  const [orderTotal, setOrderTotal] = useState(0);
 
   function getItemInfo(id) {
     const item = items.find((x) => id === x.id);
     return item;
   }
 
-  // const orderTotal = orderItems
-  //   .map((orderItem) => {
-  //     const item = getItemInfo(orderItem.menuItemId);
-  //     return orderItem.quantity * item.price;
-  //   })
-  //   .reduce((accumulator, currentValue) => accumulator + currentValue)
-  //   .toFixed(2);
+  useEffect(() => {
+    if (orderItems.length > 0) {
+      setOrderTotal(
+        orderItems
+          .map((orderItem) => {
+            const item = getItemInfo(orderItem.menuItemId);
+            return orderItem.quantity * item.price;
+          })
+          .reduce((accumulator, currentValue) => accumulator + currentValue)
+      );
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,7 +75,6 @@ const PaymentForm = () => {
             id,
           }
         );
-        console.log(response);
         if (response.data.success) {
           console.log("Successful payment");
           setSuccess(true);
@@ -84,14 +89,14 @@ const PaymentForm = () => {
   };
 
   const handleSuccess = async () => {
-    fetch(`${API}/orders/${order.id}`, {
+    await fetch(`${API}/orders/${order.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        totalPrice: 7.25,
+        totalPrice: orderTotal,
         status: "COMPLETE",
       }),
     });
