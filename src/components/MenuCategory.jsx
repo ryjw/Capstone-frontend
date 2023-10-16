@@ -9,7 +9,6 @@ export default function MenuCategory() {
   const { category } = useParams();
   const categoryArray = category.split("");
   categoryArray[0] = categoryArray[0].toUpperCase();
-  // sides and fries remain, sandwiches
   const capitalisedCategory = categoryArray.join("");
   if (
     categoryArray[categoryArray.length - 1] === "s" &&

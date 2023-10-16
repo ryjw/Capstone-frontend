@@ -54,6 +54,7 @@ export default function ItemDetail() {
   return (
     item && (
       <div className="flex-center">
+<<<<<<< HEAD
         <div className="item-detail-grid-container">
           <img
             className="item-detail-images"
@@ -64,6 +65,12 @@ export default function ItemDetail() {
             <h3 className="item-detail-name">{item.name}</h3>
             <span>-</span>
             <h3 className="item-detail-price">${item.price.toFixed(2)}</h3>
+=======
+        <div className="grid-container">
+          <img className="item-image" src={item.image} alt="food item" />
+          <div className="grid-item">
+            <h3>{item.name}</h3>
+>>>>>>> fb12fbaef9f5ff74ac811f46e5083d7d92b01a17
           </div>
           <p className="item-detail-description">{item.description}</p>
           <button
