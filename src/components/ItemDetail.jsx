@@ -54,7 +54,7 @@ export default function ItemDetail() {
     item && (
       <div className="flex-center">
         <div className="grid-container">
-          <img className="item-image" src={`/Burger.jpg`} alt="food item" />
+          <img className="item-image" src={item.image} alt="food item" />
           <div className="grid-item">
             <h3>{item.name}</h3>
           </div>
