@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "../../public/Clam.png"
 import { BsBasket2 } from "react-icons/bs";
-
 function NavItems({ token, handleLogout, user, items, orderItems }) {
   const [isOpen, setIsOpen] = useState(false);
   const [orderTotal, setOrderTotal] = useState(0);
@@ -40,8 +40,7 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
           <div className="logo-container">
             <img
               className="logo"
-              // src="https://i.redd.it/dy9l3iww2fe21.png"
-              src="/KrustyKrabLogo.png"
+              src="/Clam.png"
             ></img>
           </div>
           <div
