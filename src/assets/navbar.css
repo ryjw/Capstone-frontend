@@ -1,13 +1,18 @@
 /* Add your styles for desktop view here */
+
+.header {
+  background-image: url("/public/sky.jpg");
+}
+
+
 .navbar {
-  /* background-color: #ffffff; */
-  background-color: rgba(27, 221, 228, 1);
   color: #000000;
   padding: 20px 0;
   flex-direction: row;
-  box-shadow: 0 3px 5px rgba(207, 26, 26, 0.993);
+  box-shadow: 0 8px 10px rgba(255, 253, 253, 0.993);
   position: relative;
   z-index: 1; /* Add a higher z-index */
+  height: 400px;
 }
 
 .navbar-container {

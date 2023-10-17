@@ -17,6 +17,10 @@ function NavItems({ token, handleLogout, user }) {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-container">
+          {/* <img
+              className="logo"
+              src="/Rays.jpg"
+            ></img> */}
             <img
               className="logo"
               src="/Clam.png"
