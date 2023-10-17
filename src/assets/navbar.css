@@ -115,3 +115,11 @@
   margin-left: 100px;
   font-size: 30px;
 }
+
+#basket-icon {
+  font-size: 30px;
+}
+
+#basket-span {
+  white-space: nowrap;
+}

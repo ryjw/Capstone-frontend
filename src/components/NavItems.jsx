@@ -1,16 +1,37 @@
-import React, { useState } from "react";
-import { Link, useLocation, useOutletContext } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../assets/navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../../public/Clam.png"
-
-function NavItems({ token, handleLogout, user }) {
+import { BsBasket2 } from "react-icons/bs";
+function NavItems({ token, handleLogout, user, items, orderItems }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [orderTotal, setOrderTotal] = useState(0);
   const location = useLocation();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+  function getItemInfo(id) {
+    const item = items.find((x) => id === x.id);
+    return item;
+  }
+
+  useEffect(() => {
+    if (orderItems.length > 0) {
+      setOrderTotal(
+        orderItems
+          .map((orderItem) => {
+            const item = getItemInfo(orderItem.menuItemId);
+            return orderItem.quantity * item.price;
+          })
+          .reduce((accumulator, currentValue) => accumulator + currentValue)
+      );
+    } else {
+      setOrderTotal(0);
+    }
+  }, [orderItems]);
 
   return (
     <>
@@ -42,6 +63,11 @@ function NavItems({ token, handleLogout, user }) {
                   <span className="navbar-titles">Our Menu</span>
                 </Link>
               </li>
+              {token && (
+                <li>
+                  <span className="navbar-titles">Hello {user.username}</span>
+                </li>
+              )}
               {!token && (
                 <>
                   <li>
@@ -66,43 +92,6 @@ function NavItems({ token, handleLogout, user }) {
                   </li>
                 </>
               )}
-              {token && (
-                <>
-                  <li>
-                    <span>Hello {user.username}</span>
-                  </li>
-                  <li>
-                    <Link to="/" onClick={handleLogout} className="">
-                      <span className="navbar-titles">Logout</span>
-                    </Link>
-                  </li>
-                </>
-              )}
-              {token && (
-                <>
-                  <li>
-                    <Link
-                      to="/basket"
-                      className={
-                        location.pathname === "/basket" ? "active-link" : ""
-                      }
-                    >
-                      <span className="navbar-titles">Basket</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/orders"
-                      className={
-                        location.pathname === "/orders" ? "active-link" : ""
-                      }
-                    >
-                      <span className="navbar-titles">Orders</span>
-                    </Link>
-                  </li>
-                </>
-              )}
-
               <li>
                 <Link
                   to="/about"
@@ -115,16 +104,6 @@ function NavItems({ token, handleLogout, user }) {
               </li>
               <li>
                 <Link
-                  to="/locate"
-                  className={
-                    location.pathname === "/locate" ? "active-link" : ""
-                  }
-                >
-                  <span className="navbar-titles">Locate</span>
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/deals"
                   className={
                     location.pathname === "/deals" ? "active-link" : ""
@@ -133,16 +112,41 @@ function NavItems({ token, handleLogout, user }) {
                   <span className="navbar-titles">Exclusive Deals</span>
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className={
-                    location.pathname === "/careers" ? "active-link" : ""
-                  }
-                >
-                  <span className="navbar-titles">Careers</span>
-                </Link>
-              </li>
+              {token && (
+                <>
+                  <li>
+                    <Link to="/" onClick={handleLogout} className="">
+                      <span className="navbar-titles">Logout</span>
+                    </Link>
+                  </li>
+                </>
+              )}
+              {token && (
+                <>
+                  <li>
+                    <Link
+                      to="/orders"
+                      className={
+                        location.pathname === "/orders" ? "active-link" : ""
+                      }
+                    >
+                      <span className="navbar-titles">Orders</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/basket"
+                      className={
+                        location.pathname === "/basket" ? "active-link" : ""
+                      }
+                    >
+                      <span id="basket-span" className="navbar-titles">
+                        <BsBasket2 id="basket-icon" />${orderTotal.toFixed(2)}
+                      </span>
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>

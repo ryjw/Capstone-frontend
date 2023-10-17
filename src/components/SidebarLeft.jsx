@@ -111,7 +111,7 @@ export default function SidebarLeft() {
           >
             <img
               className="sidebar-left-item-photos"
-              src="/BikiniBratwurst.jpg"
+              src="/Hotdog.jpg"
               alt="hotdog photo"
             />
             <h2 className="sidebar-left-item-headers">Hotdogs</h2>
@@ -176,7 +176,7 @@ export default function SidebarLeft() {
           >
             <img
               className="sidebar-left-item-photos"
-              src="/KelpShake.jpg"
+              src="/Milkshake1.jpg"
               alt="milkshake photo"
             />
             <h2 className="sidebar-left-item-headers">Milkshakes</h2>
