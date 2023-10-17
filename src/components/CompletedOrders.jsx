@@ -6,7 +6,6 @@ import "../assets/orders.css";
 export default function CompletedOrders() {
   const { token, user, items } = useOutletContext();
   const [orders, setOrders] = useState([]);
-  console.log(user, token);
   async function fetchOrders() {
     const res = await fetch(`${API}/orders/${user.id}`, {
       method: "GET",
