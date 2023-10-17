@@ -120,9 +120,10 @@ const PaymentForm = () => {
   return (
     <>
       {!success ? (
-        <form onSubmit={handleSubmit}>
-          <fieldset className="FormGroup">
-            <div className="FormRow">
+        <form id="form"
+        onSubmit={handleSubmit}>
+          <fieldset id="FormGroup">
+            <div id="FormRow">
               <CardElement options={CARD_OPTIONS} />
             </div>
           </fieldset>
