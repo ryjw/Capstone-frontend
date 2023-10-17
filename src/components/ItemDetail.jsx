@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useOutletContext, useParams } from "react-router-dom";
+import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import { API } from "../API/api";
 import "../assets/itemDetail.css";
 
@@ -7,6 +7,7 @@ export default function ItemDetail() {
   const { itemId } = useParams();
   const { token, items, orderItems, order, fetchOpenOrder } =
     useOutletContext();
+  const navigate = useNavigate();
   const [message, setMessage] = useState("");
   const item = items.find((item) => item.id === itemId);
 
@@ -66,12 +67,22 @@ export default function ItemDetail() {
             <h3 className="item-detail-price">${item.price.toFixed(2)}</h3>
           </div>
           <p className="item-detail-description">{item.description}</p>
-          <button
-            className="item-detail-add-to-basket-button"
-            onClick={addToBasket}
-          >
-            Add to Cart
-          </button>
+          {token && (
+            <button
+              className="item-detail-add-to-basket-button"
+              onClick={addToBasket}
+            >
+              Add to Cart
+            </button>
+          )}
+          {!token && (
+            <button
+              className="item-detail-add-to-basket-button"
+              onClick={() => navigate("/login")}
+            >
+              Add to Cart
+            </button>
+          )}
           <p>{message}</p>
         </div>
       </div>

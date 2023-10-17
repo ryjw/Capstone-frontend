@@ -91,6 +91,8 @@ function App() {
         setToken={setToken}
         setOrder={setOrder}
         setOrderItems={setOrderItems}
+        items={items}
+        orderItems={orderItems}
       />
       <Outlet
         context={{
