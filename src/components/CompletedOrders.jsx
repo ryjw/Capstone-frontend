@@ -20,7 +20,10 @@ export default function CompletedOrders() {
       const complete = info.orders.filter(
         (order) => order.status === "COMPLETE"
       );
-      setOrders(complete);
+      const sorted = complete.sort((a, b) =>
+        b.createdAt.localeCompare(a.createdAt)
+      );
+      setOrders(sorted);
     } else {
       console.log(info);
       console.log(user.id);
@@ -28,7 +31,6 @@ export default function CompletedOrders() {
   }
   useEffect(() => {
     fetchOrders();
-    console.log(orders);
   }, [token]);
 
   return orders.length === 0 ? (
