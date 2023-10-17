@@ -3,14 +3,17 @@
 .main-containers {
   display: flex;
   margin: 100px;
-  max-width: 1400px;
+  /* max-width: 1400px; */
   /* border: 2px solid orangered; */
 }
 
 .display-items-containers {
   display: flex;
   flex-direction: column;
+  flex-shrink: 1;
   background-color: white;
+  /* width: 950px; */
+  /* min-width: 950px; */
   border-radius: 20px;
   margin-left: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
@@ -30,8 +33,11 @@
 .grid-containers {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
+  /* align-items: center;
+  justify-content: center; */
+
   gap: 20px;
   /* border: 1px solid blue; */
 }
