@@ -1,5 +1,6 @@
 .exclusive-deals {
   margin: 20px;
+  max-width: 1000px;
 }
 
 .exclusive-deal {
@@ -7,6 +8,7 @@
 }
 
 .deal-title {
+  text-align: left;
   font-size: 24px;
   font-weight: bold;
   color: #ff5722;
@@ -35,3 +37,6 @@
   font-family: "Chelsea Market", cursive;
 }
 
+.about-deals-container {
+  max-width: 600px;
+}

@@ -73,7 +73,7 @@ export default function Basket() {
   }
 
   return orderItems.length > 0 ? (
-    <div>
+    <div className="basket">
       <h1>Basket</h1>
       <div>
         {orderItems.map((orderItem) => {

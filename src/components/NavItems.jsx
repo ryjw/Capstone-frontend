@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../assets/navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import "../../public/Clam.png"
+import "../../public/Clam.png";
 import { BsBasket2 } from "react-icons/bs";
 function NavItems({ token, handleLogout, user, items, orderItems }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,14 +38,11 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-container">
-          {/* <img
+            {/* <img
               className="logo"
               src="/Rays.jpg"
             ></img> */}
-            <img
-              className="logo"
-              src="/Clam.png"
-            ></img>
+            <img className="logo" src="/Clam.png"></img>
           </div>
           <div
             className={`menu-toggle ${isOpen ? "active" : ""}`}
@@ -92,16 +89,6 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
                   </li>
                 </>
               )}
-              <li>
-                <Link
-                  to="/about"
-                  className={
-                    location.pathname === "/about" ? "active-link" : ""
-                  }
-                >
-                  <span className="navbar-titles">About Our Food</span>
-                </Link>
-              </li>
               <li>
                 <Link
                   to="/deals"
