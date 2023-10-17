@@ -1,4 +1,53 @@
-.footer-container {
-  width: 1400px;
+.footer {
+  display: flex;
+  width: 100%;
+  /* border: 2px solid orangered; */
   background-color: #d6c6ac;
+  justify-content: center;
+  background-image: url("/Seafloor.jpg");
+  background-size: cover;
+  border-top: 2px solid burlywood;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 1400px;
+  gap: 0px;
+  /* border: 2px solid green; */
+}
+
+.footer-info-row-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  gap: 30px;
+  /* border: 2px solid blue; */
+}
+
+.footer-section-container {
+  flex-wrap: nowrap;
+  height: 100px;
+  /* border: 1px solid purple; */
+  border-left: 2px solid black;
+  width: auto;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+#about .footer-section-container p {
+  text-align: left;
+  font-size: 16px;
+}
+
+.footer-about-section {
+  /* border: 2px solid orangered; */
+  width: 600px;
+}
+
+.footer-about-section p {
+  text-align: left;
 }
