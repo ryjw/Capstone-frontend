@@ -2,8 +2,8 @@
 
 .header {
   background-image: url("/public/sky.jpg");
+  width: 100%;
 }
-
 
 .navbar {
   color: #000000;
