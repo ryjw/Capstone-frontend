@@ -7,11 +7,10 @@
 }
 
 .order-container {
-  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   gap: 15px;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
