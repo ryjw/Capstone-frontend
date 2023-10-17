@@ -8,6 +8,8 @@
   box-shadow: 0 3px 5px rgba(207, 26, 26, 0.993);
   position: relative;
   z-index: 1; /* Add a higher z-index */
+  max-width: 1400px;
+  /* border: 4px solid purple; */
 }
 
 .navbar-container {

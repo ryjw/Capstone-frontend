@@ -5,17 +5,23 @@ export default function SidebarLeft() {
   return (
     <div id="left-sidebar-container" className="left-sidebar-containers">
       <div id="featured-container">
-        <div
-          className="sidebar-left-item-containers"
-          id="sidebar-left-featured-favorite"
+        <NavLink
+          to="/menu/featured"
+          id="navlink-featured"
+          className="sidebar-left-navlinks"
         >
-          <img
-            className="sidebar-left-item-photos"
-            src="/Donut.jpg"
-            alt="donut photo"
-          />
-          <h2 className="sidebar-left-item-headers">Featured Favorites</h2>
-        </div>
+          <div
+            className="sidebar-left-item-containers"
+            id="sidebar-left-featured-favorite"
+          >
+            <img
+              className="sidebar-left-item-photos"
+              src="/Treat1.jpg"
+              alt="donut photo"
+            />
+            <h2 className="sidebar-left-item-headers">Featured</h2>
+          </div>
+        </NavLink>
       </div>
       <div id="left-sidebar-main-container">
         <NavLink

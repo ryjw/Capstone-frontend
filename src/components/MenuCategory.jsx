@@ -23,9 +23,33 @@ export default function MenuCategory() {
 
   const searchCategory = categoryArray.join("");
 
-  const filteredItems = items.filter(
-    (item) => item.category === searchCategory
-  );
+  // const filteredItems = items.filter(
+  //   (item) => item.category === searchCategory
+  // );
+
+  function generateRandomIndexes(range, count) {
+    if (range <= count) {
+      return Array.from({ length: range }, (_, i) => i);
+    }
+    const indexes = new Set();
+    while (indexes.size < count) {
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * range);
+      } while (indexes.has(randomIndex));
+      indexes.add(randomIndex);
+    }
+    return Array.from(indexes);
+  }
+
+  let filteredItems = [];
+
+  if (searchCategory !== "Featured") {
+    filteredItems = items.filter((item) => item.category === searchCategory);
+  } else {
+    const randomIndexes = generateRandomIndexes(items.length, 10);
+    filteredItems = randomIndexes.map((index) => items[index]);
+  }
 
   return (
     <>
