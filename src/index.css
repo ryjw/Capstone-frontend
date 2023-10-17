@@ -26,14 +26,14 @@ body {
   );
 }
 
-.app-container {
+/* .app-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid orangered; */
+  /* border: 1px solid orangered;
   width: 100%;
-}
+} */
 
 .basket {
   min-height: 500px;
