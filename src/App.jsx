@@ -83,7 +83,7 @@ function App() {
   }, [order]);
 
   return (
-    <>
+    <div className="app-container">
       <Navbar
         token={token}
         user={user}
@@ -108,7 +108,7 @@ function App() {
         }}
       />
       <Footer />
-    </>
+    </div>
   );
 }
 

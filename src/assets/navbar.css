@@ -13,6 +13,7 @@
   position: relative;
   z-index: 1; /* Add a higher z-index */
   height: 400px;
+  width: 100%;
 }
 
 .navbar-container {
