@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useOutletContext } from "react-router-dom";
 import "../assets/navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "../../public/Clam.png"
 
 function NavItems({ token, handleLogout, user }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,7 @@ function NavItems({ token, handleLogout, user }) {
           <div className="logo-container">
             <img
               className="logo"
-              // src="https://i.redd.it/dy9l3iww2fe21.png"
-              src="/KrustyKrabLogo.png"
+              src="/Clam.png"
             ></img>
           </div>
           <div
