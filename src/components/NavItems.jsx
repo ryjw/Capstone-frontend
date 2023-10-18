@@ -60,11 +60,6 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
                   <span className="navbar-titles">Our Menu</span>
                 </Link>
               </li>
-              {token && (
-                <li>
-                  <span className="navbar-titles">Hello {user.username}</span>
-                </li>
-              )}
               {!token && (
                 <>
                   <li>
@@ -99,6 +94,11 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
                   <span className="navbar-titles">Exclusive Deals</span>
                 </Link>
               </li>
+              {token && (
+                <li>
+                  <span className="navbar-titles">Hello {user.username}</span>
+                </li>
+              )}
               {token && (
                 <>
                   <li>

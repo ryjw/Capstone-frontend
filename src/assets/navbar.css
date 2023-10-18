@@ -1,7 +1,7 @@
 /* Add your styles for desktop view here */
 
 .header {
-  background-image: url("/public/sky.jpg");
+  background-image: url("sky.jpg");
   width: 100%;
 }
 
@@ -14,6 +14,8 @@
   z-index: 1; /* Add a higher z-index */
   height: 400px;
   width: 100%;
+  justify-content: center;
+  /* border: 3px solid rgb(27, 241, 8); */
 }
 
 .navbar-container {
@@ -24,12 +26,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 34px;
+  /* border: 1px solid red; */
 }
 
 .logo {
-  font-size: 44px;
-  margin-right: 150px;
-  height: 200px;
+  height: 270px;
+  /* border: 1px solid rgb(251, 255, 1); */
+
+ /* margin-bottom: 50px; */
 }
 
 .navbar-titles {
@@ -53,17 +57,26 @@
 .nav-links a.active-link {
   color: #000000;
   font-weight: bold;
-  border-bottom: 4px solid #e21313;
+  /* border-bottom: 4px solid #e21313; */
 }
 
 .nav-links li {
   display: inline;
   margin-right: 30px;
   font-size: 30px;
+  font-weight: 700;
 }
 
-/* Add your styles for mobile view using media queries */
-/* Add your styles for mobile view using media queries */
+
+ul {
+  display: flex;
+  width: 800px;
+  /* border: 1px solid rgb(158, 5, 247); */
+  margin-bottom: 80px;
+  justify-content: space-around;
+}
+
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: flex; /* Change display property to flex */
