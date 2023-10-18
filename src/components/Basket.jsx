@@ -1,7 +1,7 @@
 import { NavLink, useOutletContext, Link } from "react-router-dom";
 import { FiPlus, FiMinus, FiTrash, FiTrash2 } from "react-icons/fi";
 import { API } from "../API/api.js";
- import "../assets/basket.css"
+import "../assets/basket.css";
 
 export default function Basket() {
   const { orderItems, items, order, fetchOpenOrder, token } =
@@ -92,7 +92,10 @@ export default function Basket() {
                   onClick={() => handleAdd(orderItem)}
                   className="plusminus"
                 />
-                <FiTrash2 onClick={() => handleRemove(orderItem)} />
+                <FiTrash2
+                  className="plusminus"
+                  onClick={() => handleRemove(orderItem)}
+                />
               </p>
               <p className="price">
                 X {orderItem.quantity} = $
