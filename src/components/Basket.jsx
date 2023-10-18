@@ -1,6 +1,7 @@
 import { NavLink, useOutletContext, Link } from "react-router-dom";
 import { FiPlus, FiMinus, FiTrash, FiTrash2 } from "react-icons/fi";
 import { API } from "../API/api.js";
+ import "../assets/basket.css"
 
 export default function Basket() {
   const { orderItems, items, order, fetchOpenOrder, token } =
@@ -75,14 +76,14 @@ export default function Basket() {
   return orderItems.length > 0 ? (
     <div className="basket">
       <h1>Basket</h1>
-      <div>
+      <div className="total-order">
         {orderItems.map((orderItem) => {
           const item = getItemInfo(orderItem.menuItemId);
           return (
             <div key={orderItem.id}>
               <h2>{item.name}</h2>
-              <p>${item.price.toFixed(2)}</p>
-              <p>
+              <p className="price">${item.price.toFixed(2)}</p>
+              <p className="adding">
                 <FiMinus
                   onClick={() => handleSubtract(orderItem)}
                   className="plusminus"
@@ -93,16 +94,16 @@ export default function Basket() {
                 />
                 <FiTrash2 onClick={() => handleRemove(orderItem)} />
               </p>
-              <p>
+              <p className="price">
                 X {orderItem.quantity} = $
                 {(item.price * orderItem.quantity).toFixed(2)}
               </p>
             </div>
           );
         })}
-        <div>
+        <div className="basket-total">
           <h1>Basket total</h1>
-          <p>
+          <p className="cashTotal">
             $
             {orderItems
               .map((orderItem) => {
@@ -115,11 +116,11 @@ export default function Basket() {
         </div>
       </div>
       <Link to="/payment">
-        <button>Checkout</button>
+        <button className="checkoutButton">Checkout</button>
       </Link>
     </div>
   ) : (
-    <div>
+    <div className="emptyBasketMessage">
       <h1>Basket empty</h1>
     </div>
   );
