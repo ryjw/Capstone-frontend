@@ -57,7 +57,7 @@ function App() {
   }
 
   function extractOrderItems() {
-    if (order && order.orderItems && order.orderItems.length > 0) {
+    if (order && order.orderItems) {
       setOrderItems(order.orderItems);
     }
   }
@@ -103,6 +103,7 @@ function App() {
             setOrder,
             orderItems,
             fetchOpenOrder,
+            extractOrderItems,
             setOrderItems,
             token,
             user,

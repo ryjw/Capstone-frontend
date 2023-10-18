@@ -4,7 +4,7 @@ import { API } from "../API/api.js";
 import "../assets/basket.css";
 
 export default function Basket() {
-  const { orderItems, items, order, fetchOpenOrder, token } =
+  const { orderItems, items, order, fetchOpenOrder, token, extractOrderItems } =
     useOutletContext();
 
   function getItemInfo(id) {
@@ -69,6 +69,7 @@ export default function Basket() {
     });
     const info = await res.json();
     if (info.success) {
+      console.log(info);
       fetchOpenOrder();
     }
   }
