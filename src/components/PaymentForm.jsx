@@ -129,7 +129,7 @@ const PaymentForm = () => {
           <button id="stripe-button">Pay</button>
         </form>
       ) : (
-        <div>
+        <div className="order-thank-you">
           <h2>Thank you for your order!</h2>
         </div>
       )}
