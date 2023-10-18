@@ -39,8 +39,7 @@ export default function Register() {
       });
       const info2 = await res2.json();
       setOrder(info2.order);
-
-      navigate("/");
+      navigate("/menu/featured");
     } else {
       setError(info.error);
     }

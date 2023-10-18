@@ -3,9 +3,11 @@ import Item from "./Item.jsx";
 import "../assets/menu.css";
 import "../assets/sidebarLeft.css";
 import SidebarLeft from "./SidebarLeft.jsx";
+import { useEffect, useState } from "react";
 
 export default function MenuCategory() {
   const { items, token, addToBasket } = useOutletContext();
+  const [filteredItems, setFilteredItems] = useState([]);
   let { category } = useParams();
   if (!category) {
     category = "Featured";
@@ -45,14 +47,26 @@ export default function MenuCategory() {
     return Array.from(indexes);
   }
 
-  let filteredItems = [];
+  useEffect(() => {
+    if (searchCategory !== "Featured") {
+      setFilteredItems(
+        items.filter((item) => item.category === searchCategory)
+      );
+    } else {
+      const randomIndexes = generateRandomIndexes(items.length, 10);
+      setFilteredItems(randomIndexes.map((index) => items[index]));
+    }
+  }, [items, searchCategory]);
 
-  if (searchCategory !== "Featured") {
-    filteredItems = items.filter((item) => item.category === searchCategory);
-  } else {
-    const randomIndexes = generateRandomIndexes(items.length, 10);
-    filteredItems = randomIndexes.map((index) => items[index]);
-  }
+  // let filteredItems = [];
+
+  // if (searchCategory !== "Featured") {
+  //   filteredItems = items.filter((item) => item.category === searchCategory);
+  // } else {
+  //   const randomIndexes = generateRandomIndexes(items.length, 10);
+  //   filteredItems = randomIndexes.map((index) => items[index]);
+  //   console.log;
+  // }
 
   return (
     <>

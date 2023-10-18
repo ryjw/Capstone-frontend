@@ -27,7 +27,7 @@ export default function Login() {
     if (info.success) {
       setToken(info.token);
       localStorage.setItem("token", info.token);
-      navigate("/");
+      navigate("/menu/featured");
     } else {
       setError(info.error);
     }

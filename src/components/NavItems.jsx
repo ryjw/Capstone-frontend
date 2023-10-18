@@ -37,11 +37,9 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="logo-container">
-            {/* <img
-              className="logo"
-              src="/Rays.jpg"
-            ></img> */}
-            <img className="logo" src="/Clam.png"></img>
+            <Link to={"/menu/featured"}>
+              <img className="logo" src="/Clam.png"></img>
+            </Link>
           </div>
           <div
             className={`menu-toggle ${isOpen ? "active" : ""}`}
