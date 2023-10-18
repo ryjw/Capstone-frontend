@@ -33,7 +33,7 @@ export default function CompletedOrders() {
   }, [token]);
 
   return orders.length === 0 ? (
-    <h1>No orders completed yet</h1>
+    <> </>
   ) : (
     <div className="order-container">
       {orders.map((order) => {
