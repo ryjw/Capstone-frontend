@@ -1,28 +1,44 @@
-.exclusive-deals {
-  margin: 20px;
-  max-width: 1000px;
+.exclusive-deals-container {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  margin-bottom: 50px;
+  /* border: 1px solid green; */
 }
 
-.exclusive-deal {
-  margin-bottom: 30px;
+.exclusive-deal-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 50px;
+  /* border: 1px solid purple; */
+}
+
+.deal-titles {
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .deal-title {
   text-align: left;
   font-size: 24px;
-  font-weight: bold;
   color: #ff5722;
 }
 
 .deal-description {
   font-size: 16px;
-  margin-top: 5px;
   color: #333;
+  width: 75%;
 }
 
 .deal-price {
-  font-size: 20px;
-  color: #4caf50;
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  color: #ff5722;
 }
 
 .deal-origin {
@@ -39,4 +55,11 @@
 
 .about-deals-container {
   max-width: 600px;
+}
+
+#exclusive-deals-title {
+  font-size: 30px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  /* border: 1px solid pink; */
 }

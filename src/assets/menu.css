@@ -1,5 +1,10 @@
 /* menu item pages */
 
+/* .menu-component-container {
+  border: 2px solid violet;
+  background-color: green;
+} */
+
 .main-containers {
   display: flex;
   margin: 100px;
@@ -16,19 +21,17 @@
   border-radius: 20px;
   margin-left: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
-  /* border: 1px solid green; */
   height: max-content;
   width: max-content;
   padding-bottom: 30px;
+  /* border: 1px solid green; */
 }
 
 .display-items-titles {
   height: 56px;
   font-size: 40px;
   text-align: center;
-  /* margin-top: 30px; */
   margin: 30px auto;
-  /* width: 100%; */
   /* border: 1px solid orangered; */
 }
 
@@ -36,15 +39,7 @@
   /* display: flex; */
   display: grid;
   grid-template-columns: auto auto auto;
-  /* grid-auto-flow: column; */
-  /* grid-auto-columns: 1fr; */
-  /* flex-wrap: wrap; */
-  /* justify-content: flex-start;
-  align-items: flex-start; */
   align-items: center;
-  /* justify-content: center; */
-  /* gap: 20px; */
-  /* border: 1px solid blue; */
   height: max-content;
 }
 

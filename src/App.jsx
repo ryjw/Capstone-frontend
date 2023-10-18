@@ -94,19 +94,21 @@ function App() {
         items={items}
         orderItems={orderItems}
       />
-      <Outlet
-        context={{
-          setToken,
-          items,
-          order,
-          setOrder,
-          orderItems,
-          fetchOpenOrder,
-          setOrderItems,
-          token,
-          user,
-        }}
-      />
+      <div className="outlet-container">
+        <Outlet
+          context={{
+            setToken,
+            items,
+            order,
+            setOrder,
+            orderItems,
+            fetchOpenOrder,
+            setOrderItems,
+            token,
+            user,
+          }}
+        />
+      </div>
       <Footer />
     </div>
   );

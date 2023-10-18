@@ -49,9 +49,11 @@ export default function Register() {
   async function createBasket() {}
 
   return (
-    <div className="flex-center">
+    // <div className="flex-center">
+    <div className="login-component-container">
       <div>
-        <form className="forms"
+        <form
+          className="forms"
           onSubmit={(e) => {
             handleRegister(e);
           }}
