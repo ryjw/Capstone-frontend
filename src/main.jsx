@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-      { path: "/", element: <Menu /> },
+      { path: "/", element: <MenuCategory /> },
       { path: "/menu/:category", element: <MenuCategory /> },
       { path: "basket", element: <Basket /> },
       { path: "login", element: <Login /> },

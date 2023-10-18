@@ -6,7 +6,10 @@ import SidebarLeft from "./SidebarLeft.jsx";
 
 export default function MenuCategory() {
   const { items, token, addToBasket } = useOutletContext();
-  const { category } = useParams();
+  let { category } = useParams();
+  if (!category) {
+    category = "Featured";
+  }
   const categoryArray = category.split("");
   categoryArray[0] = categoryArray[0].toUpperCase();
   const capitalisedCategory = categoryArray.join("");

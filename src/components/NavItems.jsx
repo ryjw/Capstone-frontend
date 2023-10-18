@@ -54,7 +54,7 @@ function NavItems({ token, handleLogout, user, items, orderItems }) {
             <ul className="links">
               <li>
                 <Link
-                  to="/"
+                  to="/menu/featured"
                   className={location.pathname === "/" ? "active-link" : ""}
                 >
                   <span className="navbar-titles">Our Menu</span>
