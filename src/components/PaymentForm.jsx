@@ -118,10 +118,9 @@ const PaymentForm = () => {
     }
   };
   return (
-    <>
+    <div className="payment-form-component">
       {!success ? (
-        <form id="form"
-        onSubmit={handleSubmit}>
+        <form id="form" onSubmit={handleSubmit}>
           <fieldset id="FormGroup">
             <div id="FormRow">
               <CardElement options={CARD_OPTIONS} />
@@ -134,7 +133,7 @@ const PaymentForm = () => {
           <h2>Thank you for your order!</h2>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -34,32 +34,35 @@ export default function Login() {
   }
 
   return (
-    <div className="flex-center">
-        <form id="login-form" className="forms"
-          onSubmit={(e) => {
-            handleLogin(e);
-          }}
-        >
-          <div className="input-container">
-            <input
-              className="login-form-inputs"
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Username"
-              value={username}
-            />
-          </div>
-          <div className="input-container">
-            <input
-              className="login-form-inputs"
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              value={password}
-            />
-          </div>
-          <div>
-            <button id="login-button">Login</button>
-          </div>
-        </form>
+    // <div className="flex-center">
+    <div className="login-component-container">
+      <form
+        id="login-form"
+        className="forms"
+        onSubmit={(e) => {
+          handleLogin(e);
+        }}
+      >
+        <div className="input-container">
+          <input
+            className="login-form-inputs"
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username"
+            value={username}
+          />
+        </div>
+        <div className="input-container">
+          <input
+            className="login-form-inputs"
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            value={password}
+          />
+        </div>
+        <div>
+          <button id="login-button">Login</button>
+        </div>
+      </form>
       <p>{error}</p>
     </div>
   );
